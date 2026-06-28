@@ -51,12 +51,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'skm_service.wsgi.application'
 
+# ============= اصلاح اصلی =============
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join('/tmp', 'db.sqlite3'),
     }
 }
+# ======================================
 
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
