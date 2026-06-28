@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: skm-backend
+    runtime: docker
+    repo: https://github.com/kamal09111557705/skm-bachend-v2
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 10000
