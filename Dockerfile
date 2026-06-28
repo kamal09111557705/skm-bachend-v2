@@ -10,4 +10,4 @@ COPY . .
 
 ENV PORT=10000
 
-CMD ["sh", "-c", "python manage.py migrate --noinput && python manage.py collectstatic --noinput && gunicorn skm_service.wsgi:application --bind 0.0.0.0:$PORT"]
+CMD ["sh", "-c", "python manage.py makemigrations && python manage.py migrate --noinput && python manage.py collectstatic --noinput && gunicorn skm_service.wsgi:application --bind 0.0.0.0:$PORT"]
